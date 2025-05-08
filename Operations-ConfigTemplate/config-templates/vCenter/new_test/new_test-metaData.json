@@ -1,0 +1,18 @@
+{
+  "selectedConfig" : {
+    "config" : {
+      "vcenter" : {
+        "appliance" : {
+          "syslog" : [ {
+            "port" : 0,
+            "hostname" : "string",
+            "protocol" : "TLS"
+          } ]
+        }
+      }
+    }
+  },
+  "description" : "",
+  "sourceResourceId" : "3102fe53-841d-4017-9eb4-2a820bcaf842",
+  "configVersion" : "9.0.0.24678707"
+}
