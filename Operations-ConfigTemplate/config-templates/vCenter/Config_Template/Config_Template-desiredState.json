@@ -1,0 +1,76 @@
+{
+  "config" : {
+    "vnetworking" : {
+      "network_vds" : {
+        "switches" : [ {
+          "path" : "/VCF-DC-01/network/Management Networks/VCF-DVS-01",
+          "config" : {
+            "mtu" : 8900,
+            "uplink_port" : {
+              "name_array" : {
+                "port_names" : [ "uplink1", "uplink2" ]
+              }
+            },
+            "discovery_protocol" : {
+              "protocol_type" : "LLDP",
+              "operation_type" : "BOTH"
+            },
+            "multicast_filter_mode" : "SNOOPING",
+            "network_io_control_enabled" : true,
+            "vm_vnic_network_resource_pools" : [ ]
+          }
+        } ],
+        "portgroups" : [ {
+          "path" : "/VCF-DC-01/network/Management Networks/SDDC-DPortGroup-Mgmt",
+          "config" : {
+            "binding_type" : "EPHEMERAL",
+            "network_resource_pool_name" : ""
+          },
+          "vds_path" : "/VCF-DC-01/network/Management Networks/VCF-DVS-01"
+        }, {
+          "path" : "/VCF-DC-01/network/Management Networks/SDDC-DPortGroup-VM-Mgmt",
+          "config" : {
+            "binding_type" : "EPHEMERAL",
+            "network_resource_pool_name" : ""
+          },
+          "vds_path" : "/VCF-DC-01/network/Management Networks/VCF-DVS-01"
+        }, {
+          "path" : "/VCF-DC-01/network/Management Networks/SDDC-DPortGroup-vMotion",
+          "config" : {
+            "binding_type" : "STATIC",
+            "network_resource_pool_name" : ""
+          },
+          "vds_path" : "/VCF-DC-01/network/Management Networks/VCF-DVS-01"
+        }, {
+          "path" : "/VCF-DC-01/network/Management Networks/SDDC-DPortGroup-VSAN",
+          "config" : {
+            "binding_type" : "STATIC",
+            "network_resource_pool_name" : ""
+          },
+          "vds_path" : "/VCF-DC-01/network/Management Networks/VCF-DVS-01"
+        }, {
+          "path" : "/VCF-DC-01/network/Management Networks/VCF-DVS-01-DVUplinks-21",
+          "config" : {
+            "binding_type" : "STATIC",
+            "network_resource_pool_name" : ""
+          },
+          "vds_path" : "/VCF-DC-01/network/Management Networks/VCF-DVS-01"
+        }, {
+          "path" : "/VCF-DC-01/network/Management Networks/VCF-edge_MGMT-Edge-Cluster01_PG-VCF-DVS-01-External-1",
+          "config" : {
+            "binding_type" : "EPHEMERAL",
+            "network_resource_pool_name" : ""
+          },
+          "vds_path" : "/VCF-DC-01/network/Management Networks/VCF-DVS-01"
+        }, {
+          "path" : "/VCF-DC-01/network/Management Networks/VCF-edge_MGMT-Edge-Cluster01_PG-VCF-DVS-01-External-2",
+          "config" : {
+            "binding_type" : "EPHEMERAL",
+            "network_resource_pool_name" : ""
+          },
+          "vds_path" : "/VCF-DC-01/network/Management Networks/VCF-DVS-01"
+        } ]
+      }
+    }
+  }
+}
