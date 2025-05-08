@@ -1,0 +1,7 @@
+{
+  "contentName": "new_test",
+  "id": "4e38a012-d8ba-4377-a6f4-980369f4ae23",
+  "contentType": "Operations-ConfigTemplate",
+  "keyValues": {"location": "vCenter%2Fnew_test"},
+  "descendents": []
+}
